@@ -2,7 +2,7 @@
 
 This is a collection of snippets, settings and resources related to setting up a dev env or "workflow". 
 
-![My iterm demo](/img/iterm)
+![My iterm demo](/img/iterm.png)
 
 > Note: This doc is currently in *draft* status.
 
@@ -112,7 +112,7 @@ touch .hushlogin
 
 A slightly silly utility to keep track of a live mic in meetings.
 
-![Animation of zoom menu bar toggling](img/zoom_swiftbar.gif)
+![Animation of zoom menu bar toggling](img/zoom-swiftbar.gif)
 
 - SwiftBar https://github.com/swiftbar/SwiftBar
 	- `brew install swiftbar`
