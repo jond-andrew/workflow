@@ -6,13 +6,6 @@ This is a collection of snippets, settings and resources related to setting up a
 
 > Note: This doc is currently in *draft* status.
 
-### Additional Onboarding Gudies
-
-- [New Hire Checklist - Onboarding Email](https://docs.google.com/document/d/1oWpsuNplzDFAaD5Ks59aquoZ1RIlf7z6heVwaX7XiaQ/edit?usp=sharing)
-- [O11y and Synthetic Monitoring Environment Setup - Team 404](https://confluence.splunk.com/display/PROD/O11y+and+Synthetic+Monitoring+Environment+Setup)
-- [O11y App Developer’s Guide - Signal Fx](https://docs.google.com/document/d/1kDWCuY5y0IokbSkpx-edgyjwl3hl1YRoX0JixuiH6Z4/edit?usp=sharing)
-- [Setting-up Your New Splunk Mac Laptop](https://docs.google.com/document/d/1ry-AGxdPO98Hlzq6cNDZPBlodJIQwOckDNXY5sVdy1Q/edit?usp=sharing)
-
 ### Apps
 
 - iTerm2
@@ -66,8 +59,7 @@ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/loca
 Useful: [zsh GitHub commands Cheatsheet](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet)
 
 
-
-#### iTerm 2
+### iTerm 2
 
 Manual instructions for setting up iTerm. In iTerm Preferences
 
@@ -124,19 +116,19 @@ A slightly silly utility to keep track of a live mic in meetings.
 
 > Note: the implementation of this could be better, but it works for now. The script isn't perfectly responsive and may have some overhead. 
 
+### VSCode Semantic Highlighting
+
+VSCode has a feature called [Semantic Highlighting](https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide). This is in contrast to and in addition to "Synatax Highlighting" that we are all used to. I highly recommened reading about how using color for syntax is a "waste" of an information channel at [Syntax highlighting is a waste of an information channel](https://buttondown.email/hillelwayne/archive/syntax-highlighting-is-a-waste-of-an-information/). 
+
+Therefore, I highly recommend enabling Semantic Highlighting by setting it to `true` in VSCode and using this theme, specifically created to take advantage of this feature: [Mayukai Semantc Mirage](https://marketplace.visualstudio.com/items?itemName=GulajavaMinistudio.mayukaithemevsc)
+
 ### App Store
 
 - Things 3
 - iA Writer
 
-### Favorite Splunk Value:
 
-Disruptive
-> We strive to lead, not follow, while continuing to disrupt the market.  We never say "Don't change it if it's not broken." We're always looking at things from different angles with an eye for how we can do it better, faster and more efficiently.
-
-A friend told me my motto should be: "If it's not broken, fix it 'til it is".
-
-## Hardware
+### Hardware
 
 - Keyboard: (ZSA Moonlander)[https://www.zsa.io/moonlander/]
     - A powerful and easily programmable split ergo, quickly becoming my favourite keyboard
@@ -161,57 +153,10 @@ A friend told me my motto should be: "If it's not broken, fix it 'til it is".
 
 > Possibly add changelog here. No more left shift is really a tough one to get used to!
 
-### Notes & Scratch Pad  
+### Favorite Splunk Value:
 
-TODO: Collect all of the various Set up instructions in a list with title/link
+Disruptive
 
-> Section on the packages github could be a little clearer / cleaner
-> To accept the invitation from incognito gmail for splunk packages account
- 
-```
-npm login --registry=https://npm.pkg.github.com
+> We strive to lead, not follow, while continuing to disrupt the market.  We never say "Don't change it if it's not broken." We're always looking at things from different angles with an eye for how we can do it better, faster and more efficiently.
 
-Username: jond-andrew
-Password:
-Email: (this IS public) jond@splunk.com
-Logged in as jond-andrew on https://npm.pkg.github.com/.
-```
-
-Gerrit info
-https://signalfuse.atlassian.net/wiki/spaces/SEP/pages/192446466/Gerrit+Code+Review#GerritCodeReview-Clonerepository
-
-jond-splk-packages
-jond+splk+packages@splunk.com
-
-ssh-keygen -t ed25519 -C "jond@splunk.com"
-
-git clone ssh://jond-andrew@gerrit.corp.signalfx.com:29418/signalfx/apm-app-web && scp -p -P 29418 jond-andrew@gerrit.corp.signalfx.com:hooks/commit-msg apm-app-web/.git/hooks/
-
-##### Staging:
-
-reset your Password
-
-"lab" versus dev versus staging
-
-super powers.
-
-local config patch
-
-const localConfig = {
-    syntheticsCSS: 'http://localhost:4200/syntheticsModule.css',
-    syntheticsJS: 'http://localhost:4200/syntheticsModule.js'
-};
-
-webpack.config.js
-
-/api/helpers/config.ts
-
-should be managed by .env added to .gitignore
-
-git config --list --show-origin
-
-git config --global user.email "jond@splunk.com"
-git config --global user.name "Andrew Davis"
-
-
-To get access to Cypress - go into GroupID (its an okta chicklet), and add yourself to the “sg-okta-cypress-users” group.  It’ll get approved by the admin (usually within a day) and you’ll get the okta chicklet soon after. (edited) 
+A friend told me my motto should be: "If it's not broken, fix it 'til it is".
