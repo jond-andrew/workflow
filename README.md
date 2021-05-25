@@ -22,7 +22,7 @@ This is a collection of snippets, settings and resources related to setting up a
 - [n-install](https://github.com/mklement0/n-install), if you do not have `node`
 - [neofetch](https://github.com/dylanaraps/neofetch/wiki/Installation), display system info
 
-> Amethyst Preferences, Mouse: mouse follows focus. Floating: Automatically float App: iTerm2
+> Amethyst Preferences, Mouse: Uncheck mouse follows focus. Floating: Automatically float App: iTerm2
 
 ### Oh My ZSH and related config
 
@@ -61,13 +61,14 @@ Useful: [zsh GitHub commands Cheatsheet](https://github.com/ohmyzsh/ohmyzsh/wiki
 
 ### iTerm 2
 
-Manual instructions for setting up iTerm. In iTerm Preferences
+Manual instructions for setting up iTerm, so that it "Drops down" from a hotkey. In iTerm Preferences:
 
 - General
 	- Closing: Quit when all windows are closed
 	- Closing: Uncheck confirm quit
 	- Selection: Check double-click performs smart select
 	- Window: Uncheck adjust window when changing font size
+	- (Return here when Hotkey Key is set up)
 - Appearance
 	- Theme: Minimal
 	- Window: Uncheck show window number in title bar
@@ -78,15 +79,16 @@ Manual instructions for setting up iTerm. In iTerm Preferences
 	- Colors: Color Preset: Solarized Dark
 	- Text: Font: Fira Mono for Powerline
 	- Text: Font size: 21
-	- Window: Style: Full-Width Top of Screen
-	- Window: Space: All Spaces 
-	- Keys: Hotkey Window: check "A hotkey opens..."
+	- **Window: Style: Full-Width Top of Screen**
+	- **Window: Space: All Spaces**
+	- **Keys: Hotkey Window: check "A hotkey opens..."**
 		- Hotkey
 		- Double-tap key: Command (?)
 		- On Dock icon click: Show this hotkey window
 	- After Hotkey setup, head back to General tab and:
         - Startup: select in "Window restoration policy" dropdown, "Only Restore Hotkey Window"
 	    - (Note: there's now a Hotkey section in the main "Keys", so it is possible to do this outside of Profiles)
+	- Session: At the bottom, check "Status bar enabled", configure and select "Auto-Rainbow: Automatic"
 - Keys 
     - Select menu item: Restart Session Hotkey: `shift + ⌘ + r`
 - Advanced
@@ -130,10 +132,10 @@ Therefore, I highly recommend enabling Semantic Highlighting by setting it to `t
 
 ### Hardware
 
-- Keyboard: (ZSA Moonlander)[https://www.zsa.io/moonlander/]
+- Keyboard: [ZSA Moonlander](https://www.zsa.io/moonlander/)
     - A powerful and easily programmable split ergo, quickly becoming my favourite keyboard
-    - (Link to my configuration)[https://configure.zsa.io/moonlander/layouts/eW95r/latest/0]
-- Mouse: (Glorious Model O)[https://www.pcgamingrace.com/products/glorious-model-o-white], wonderful, super light weight, comfortable, with a cord that never catches
+    - [Link to my configuration](https://configure.zsa.io/moonlander/layouts/eW95r/latest/0)
+- Mouse: [Glorious Model O](https://www.pcgamingrace.com/products/glorious-model-o-white), wonderful, super light weight, comfortable, with a cord that never catches
 - Microphone: Shure [SM7B](https://www.shure.com/en-US/products/microphones/sm7b), best in the game, make sure you have a USB Audio Interface and a definitely pick up a preamp
 - Audio Interface: [Scarlett Solo](https://focusrite.com/en/usb-audio-interface/scarlett/scarlett-solo)
 - Preamp: [Cloudlifter](https://www.sweetwater.com/store/detail/CL1Cloud--cloud-microphones-cl-1-cloudlifter-1-channel-mic-activator)
