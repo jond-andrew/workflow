@@ -8,31 +8,49 @@ This is a collection of snippets, settings and resources related to setting up a
 
 ### Apps
 
-- iTerm2
-- VSCode (?)
-- Sublime Text 4 (?)
+- iTerm2 (use Self Service app)
+- [VSCode](https://code.visualstudio.com/) 
+- [Sublime Text 4](https://www.sublimetext.com/) 
 
 ### Command Line or Brew Install Utils
 
 - [Oh My ZSH](https://github.com/ohmyzsh/ohmyzsh)
 - [Homebrew](https://brew.sh/), MacOS package manager
-- [Amethyst](https://ianyh.com/amethyst/), automagical window tiler 
-- [z](https://github.com/rupa/z), easily jump to visited directories
+- [Amethyst](https://ianyh.com/amethyst/), automagical window tiler, watch this [30s example](https://www.youtube.com/watch?v=boPilhScpkY)
+- [autojump](https://github.com/wting/autojump), easily jump to visited directories
 - [n](https://github.com/tj/n), if you already have `node`
 - [n-install](https://github.com/mklement0/n-install), if you do not have `node`
 - [neofetch](https://github.com/dylanaraps/neofetch/wiki/Installation), display system info
 
+```
+brew install --cask amethyst
+brew install autojump
+brew install neofetch
+```
+
 > Amethyst Preferences, Mouse: Uncheck mouse follows focus. Floating: Automatically float App: iTerm2
+> Amethyst Preferences, Layouts: Remove all but "Tall" and "Fullscreen"
 
 ### Oh My ZSH and related config
 
+To make editing files easier, first:
+	- open VSCode
+	- Hit `CMD + SHIFT + P` to open the command palette
+	- Type `shell` or copy this command:
 ```
-ZSH_THEME="agnoster"
+Shell Command : Install code in PATH
 ```
 
-Enable Agnoster's glyphs. Clone (Powerline Fonts)[https://github.com/powerline/fonts] and run:
+Hit enter and you can now open VSCode from terminal locations with `code` (you may need to restart your session).
+
+Open the `.zshrc` 
 ```
-./install.sh
+cd ~
+code .
+```
+
+```
+ZSH_THEME="agnoster"
 ```
 
 Update the prompt with a little bit of fun:
@@ -44,10 +62,14 @@ prompt_context() {
 }
 ```
 
-Enable `z` 
+
+Enable Agnoster's glyphs. Clone [Powerline Fonts](https://github.com/powerline/fonts) and run:
 ```
-source /usr/local/etc/profile.d/z.sh
+./install.sh
 ```
+
+
+### If Sublime Text 4
 
 
 Create a symlink for opening Sublime:
@@ -57,6 +79,8 @@ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/loca
 [Source](https://olivierlacan.com/posts/launch-sublime-text-3-from-the-command-line/)
 
 Useful: [zsh GitHub commands Cheatsheet](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet)
+
+
 
 
 ### iTerm 2
