@@ -34,9 +34,9 @@ brew install neofetch
 ### Oh My ZSH and related config
 
 To make editing files easier, first:
-	- open VSCode
-	- Hit `CMD + SHIFT + P` to open the command palette
-	- Type `shell` or copy this command:
+- open VSCode
+- Hit `CMD + SHIFT + P` to open the command palette
+- Type `shell` or copy this command:
 ```
 Shell Command : Install code in PATH
 ```
