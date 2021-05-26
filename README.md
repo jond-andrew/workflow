@@ -20,67 +20,87 @@ This is a collection of snippets, settings and resources related to setting up a
 - [autojump](https://github.com/wting/autojump), easily jump to visited directories
 - [n](https://github.com/tj/n), if you already have `node`
 - [n-install](https://github.com/mklement0/n-install), if you do not have `node`
+- [rbenv](https://github.com/rbenv/rbenv), version manager based on shims for ruby
+- [pyenv](https://github.com/pyenv/pyenv), version manager based on rbenv for python
 - [neofetch](https://github.com/dylanaraps/neofetch/wiki/Installation), display system info
 
 ```
 brew install --cask amethyst
 brew install autojump
 brew install neofetch
+brew install rbenv
+brew install pyenv
 ```
 
 > Amethyst Preferences, Mouse: Uncheck mouse follows focus. Floating: Automatically float App: iTerm2
 > Amethyst Preferences, Layouts: Remove all but "Tall" and "Fullscreen"
 
-### Oh My ZSH and related config
+### VSCode `code` utility
 
 To make editing files easier, first:
-- open VSCode
+- Open VSCode
 - Hit `CMD + SHIFT + P` to open the command palette
 - Type `shell` or copy this command:
 ```
 Shell Command : Install code in PATH
 ```
 
+### Oh My ZSH and related config
+
 Hit enter and you can now open VSCode from terminal locations with `code` (you may need to restart your session).
 
-Open the `.zshrc` 
+Open the file `.zshrc` 
 ```
 cd ~
 code .
 ```
-
+Change the theme
 ```
 ZSH_THEME="agnoster"
 ```
 
+#### ZSH Plugins
+```
+plugins=(git
+ autojump
+ zsh-autosuggestions
+ zsh-syntax-highlighting)
+```
+Install 
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+Add required entries for shim-based version management, rbenv and pyenv
+```
+eval "$(rbenv init -)"
+eval "$(pyenv init -)"
+```
+
 Update the prompt with a little bit of fun:
 ```
-prompt_context() {
+prompt_context() {****
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
     prompt_segment green black "%(!.%{%F{yellow}%}.) ༼つ◕_◕༽つ"
   fi
 }
 ```
 
-
-Enable Agnoster's glyphs. Clone [Powerline Fonts](https://github.com/powerline/fonts) and run:
+Install  `agnoster` theme's glyphs via [Powerline Fonts](https://github.com/powerline/fonts), run the following steps:
 ```
+# clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
 ./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
 ```
-
-
-### If Sublime Text 4
-
-
-Create a symlink for opening Sublime:
-```
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
-```
-[Source](https://olivierlacan.com/posts/launch-sublime-text-3-from-the-command-line/)
 
 Useful: [zsh GitHub commands Cheatsheet](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet)
-
-
 
 
 ### iTerm 2
@@ -152,6 +172,15 @@ Therefore, I highly recommend enabling Semantic Highlighting by setting it to `t
 
 - Things 3
 - iA Writer
+
+
+### If Sublime Text 4
+
+Create a symlink for opening Sublime:
+```
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
+```
+[Source](https://olivierlacan.com/posts/launch-sublime-text-3-from-the-command-line/)
 
 
 ### Hardware
