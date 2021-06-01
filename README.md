@@ -1,3 +1,7 @@
+# 301, MOVED: This now lives at [this link](https://cd.splunkdev.com/jond-andrew-davis/workflow)
+
+Moved, latest version there. May or may not leave this README present.
+
 # workflow 
 
 This is a collection of snippets, settings and resources related to setting up a dev env or "workflow". 
@@ -208,10 +212,3 @@ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/loca
 
 > Possibly add changelog here. No more left shift is really a tough one to get used to!
 
-### Favorite Splunk Value:
-
-Disruptive
-
-> We strive to lead, not follow, while continuing to disrupt the market.  We never say "Don't change it if it's not broken." We're always looking at things from different angles with an eye for how we can do it better, faster and more efficiently.
-
-A friend told me my motto should be: "If it's not broken, fix it 'til it is".
