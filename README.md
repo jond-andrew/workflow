@@ -1,4 +1,5 @@
 # 301, MOVED: This now lives at [this link](https://cd.splunkdev.com/jond-andrew-davis/workflow)
+(Do not follow this link if you are not on Splunk VPN)
 
 Moved, latest version there. May or may not leave this README present.
 
@@ -12,9 +13,9 @@ This is a collection of snippets, settings and resources related to setting up a
 
 ### Apps
 
-- iTerm2 (use Self Service app)
+- [iTerm2](https://iterm2.com/)
 - [VSCode](https://code.visualstudio.com/) 
-- [Sublime Text 4](https://www.sublimetext.com/) 
+- [Sublime Text 4](https://www.sublimetext.com/) - optional
 
 ### Command Line or Brew Install Utils
 
@@ -27,6 +28,7 @@ This is a collection of snippets, settings and resources related to setting up a
 - [rbenv](https://github.com/rbenv/rbenv), version manager based on shims for ruby
 - [pyenv](https://github.com/pyenv/pyenv), version manager based on rbenv for python
 - [neofetch](https://github.com/dylanaraps/neofetch/wiki/Installation), display system info
+- [bat](https://github.com/sharkdp/bat), a cat clone with wings
 
 ```
 brew install --cask amethyst
@@ -34,10 +36,12 @@ brew install autojump
 brew install neofetch
 brew install rbenv
 brew install pyenv
+brew install bat
 ```
 
 > Amethyst Preferences, Mouse: Uncheck mouse follows focus. Floating: Automatically float App: iTerm2
-> Amethyst Preferences, Layouts: Remove all but "Tall" and "Fullscreen"
+> Amethyst Preferences, Layouts: Remove all but "Tall" and "Fullscreen", then move "Fullscreen" to the top!
+> Keys: `Shift + Option + Space` to switch layouts, and `Shift + Option + Enter` to focus during "Tall mode", or same with `H` or `L` to change the width of the main `Tall` window.
 
 ### VSCode `code` utility
 
@@ -53,11 +57,14 @@ Shell Command : Install code in PATH
 
 Hit enter and you can now open VSCode from terminal locations with `code` (you may need to restart your session).
 
-Open the file `.zshrc` 
+Open the file `.zshrc`. It's located with other dotfiles in `~`
 ```
 cd ~
-code .
+code .zshrc
 ```
+
+Now that you have your `.zshrc` open in VSCode, edit it with the following values:
+
 Change the theme
 ```
 ZSH_THEME="agnoster"
@@ -70,6 +77,7 @@ plugins=(git
  zsh-autosuggestions
  zsh-syntax-highlighting)
 ```
+
 Install 
 ```
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -109,7 +117,7 @@ Useful: [zsh GitHub commands Cheatsheet](https://github.com/ohmyzsh/ohmyzsh/wiki
 
 ### iTerm 2
 
-Manual instructions for setting up iTerm, so that it "Drops down" from a hotkey. In iTerm Preferences:
+Very detailed manual instructions for setting up iTerm, so that it "Drops down" from a hotkey. In iTerm Preferences:
 
 - General
 	- Closing: Quit when all windows are closed
@@ -131,7 +139,10 @@ Manual instructions for setting up iTerm, so that it "Drops down" from a hotkey.
 	- **Window: Space: All Spaces**
 	- **Keys: Hotkey Window: check "A hotkey opens..."**
 		- Hotkey
-		- Double-tap key: Command (?)
+		- Double-tap key: Command (?) - Your command can be, a suggestion:
+		```
+		 Command + `
+		```
 		- On Dock icon click: Show this hotkey window
 	- After Hotkey setup, head back to General tab and:
         - Startup: select in "Window restoration policy" dropdown, "Only Restore Hotkey Window"
